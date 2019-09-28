@@ -1,0 +1,22 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/HomePage/HomePage.css":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/HomePage/HomePage.css ***!
+  \**************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva);", ""]);
+
+// Module
+exports.push([module.i, ".HomePage p {\r\n    color: darkblue;\r\n    font-family: 'Bree Serif', serif;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    padding: 10px 30px;\r\n}", ""]);
+
+
+
+/***/ })
+
+})
+//# sourceMappingURL=main.ba2bd89580687eaa1096.hot-update.js.map

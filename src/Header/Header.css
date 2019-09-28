@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: darkblue;
+    font-size: 40px;
+    font-family:'Mansalva', cursive;
+}
+
+h1 {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+  }
+
+a:visited {
+    color: darkblue;
+}
+
+.logos {
+    padding-bottom: 20px;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+span {
+    color: #E9BEB5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 90px;
+    padding-top: 35px;
+    padding-left: 12px;
+}

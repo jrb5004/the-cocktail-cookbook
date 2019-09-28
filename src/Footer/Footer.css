@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
+
+.Footer {
+    width: 100%;
+    background-color: lightblue;
+    border-top: 3px solid darkblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.5rem;
+    position: aboslute;
+    bottom: 0;
+    margin-top: 10%;
+}
+
+.name, .contact {
+    font-size: 18px;
+    color: darkblue;
+    padding: 0;
+    
+}
+
+.name {
+    font-family:'Mansalva', cursive;
+}

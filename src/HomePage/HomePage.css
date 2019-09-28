@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
+
+.HomePage {
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    background-color: #E9BEB5;
+    height: 100vh;
+}
+
+.Description {
+    text-align: center;
+    padding: 2% 5%;
+}
+
+h2 {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: center;
+}
+
+.ViewCocktails {
+    border: 3px groove darkblue;
+    text-align: center;
+    margin: 0 20%;
+}
+
+.AddRecipe {
+    margin-top: 5%;
+}

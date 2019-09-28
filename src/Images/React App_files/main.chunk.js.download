@@ -1,0 +1,535 @@
+(window["webpackJsonpcocktail-cookbook"] = window["webpackJsonpcocktail-cookbook"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/App.css ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, ".App {\r\n    background-color: #E9BEB5;\r\n    color: darkblue;\r\n    height: 100vh;\r\n}", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Header/Header.css":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/Header/Header.css ***!
+  \**********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva);", ""]);
+
+// Module
+exports.push([module.i, ".Header {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: lightblue;\r\n    color: darkblue;\r\n    font-size: 40px;\r\n    font-family:'Mansalva', cursive;\r\n}\r\n\r\nh1 {\r\n    margin-bottom: 0;\r\n    margin-top: 10px;\r\n}\r\n\r\n.logos {\r\n    padding-bottom: 20px;\r\n}\r\n\r\nimg {\r\n    width: 60px;\r\n    height: 60px;\r\n    margin-top: 50px;\r\n    margin-left: 15px;\r\n}\r\n\r\nspan {\r\n    color: #E9BEB5;\r\n    font-family: 'Times New Roman', Times, serif;\r\n    font-size: 90px;\r\n    padding-top: 35px;\r\n    padding-left: 12px;\r\n}", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/HomePage/HomePage.css":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/HomePage/HomePage.css ***!
+  \**************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva);", ""]);
+
+// Module
+exports.push([module.i, ".HomePage p {\r\n    color: darkblue;\r\n    font-family: 'Bree Serif', serif;\r\n    font-size: 20px;\r\n    text-align: center;\r\n    padding: 10px 30px;\r\n}", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/index.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\",\n    \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\",\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, \"Courier New\",\n    monospace;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./src/App.css":
+/*!*********************!*\
+  !*** ./src/App.css ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/App.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _HomePage_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HomePage/HomePage */ "./src/HomePage/HomePage.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./App.css */ "./src/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\jrb50\\Documents\\Projects\\cocktail-cookbook\\src\\App.js";
+
+
+ //import ApiContext from '../ApiContext';
+//import ApiError from '../ApiError';
+//import config from '../config';
+
+
+
+class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "App",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      path: "/",
+      component: _HomePage_HomePage__WEBPACK_IMPORTED_MODULE_2__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/Header/Header.css":
+/*!*******************************!*\
+  !*** ./src/Header/Header.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Header/Header.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Header/Header.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./Header.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Header/Header.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/Header/Header.js":
+/*!******************************!*\
+  !*** ./src/Header/Header.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.css */ "./src/Header/Header.css");
+/* harmony import */ var _Header_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Header_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\jrb50\\Documents\\Projects\\cocktail-cookbook\\src\\Header\\Header.js";
+ //import { Link } from 'react-router-dom'
+
+
+
+var Logo = __webpack_require__(/*! ../Images/Logo.png */ "./src/Images/Logo.png");
+
+var Cookbook = __webpack_require__(/*! ../Images/cookbook.png */ "./src/Images/cookbook.png");
+
+class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "Header",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "The Cocktail Cookbook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "logos",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: Logo,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "|"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: Cookbook,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    })));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./src/HomePage/HomePage.css":
+/*!***********************************!*\
+  !*** ./src/HomePage/HomePage.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./HomePage.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/HomePage/HomePage.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./HomePage.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/HomePage/HomePage.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./HomePage.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/HomePage/HomePage.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/HomePage/HomePage.js":
+/*!**********************************!*\
+  !*** ./src/HomePage/HomePage.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _HomePage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomePage.css */ "./src/HomePage/HomePage.css");
+/* harmony import */ var _HomePage_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_HomePage_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Header/Header */ "./src/Header/Header.js");
+var _jsxFileName = "C:\\Users\\jrb50\\Documents\\Projects\\cocktail-cookbook\\src\\HomePage\\HomePage.js";
+ //import { Link } from 'react-router-dom'
+
+
+
+
+class HomePage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "HomePage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "The Cocktail Cookbook provides the professional mixologist, the amatuer house-party bartender, and everyone inbetween, a convenient repository of cocktail recipes organized by category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "View and edit recipes, add your own recipes to the collection, and leave comments with your feedback/rating")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "View Recipes!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "Select cocktail category below to view recipes and start mixin'!")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (HomePage);
+
+/***/ }),
+
+/***/ "./src/Images/Logo.png":
+/*!*****************************!*\
+  !*** ./src/Images/Logo.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+
+/***/ "./src/Images/cookbook.png":
+/*!*********************************!*\
+  !*** ./src/Images/cookbook.png ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/cookbook.20685617.png";
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/index.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\jrb50\\Documents\\Projects\\cocktail-cookbook\\src\\index.js";
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9
+  },
+  __self: undefined
+})), document.getElementById('root'));
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************!*\
+  !*** multi ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\jrb50\Documents\Projects\cocktail-cookbook\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\jrb50\Documents\Projects\cocktail-cookbook\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[0,"runtime-main",0]]]);
+//# sourceMappingURL=main.chunk.js.map
