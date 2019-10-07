@@ -1,31 +1,36 @@
 import React, {Component} from 'react'
 import { Route, Link } from 'react-router-dom'
 import './RecipeDetailPage.css'
+import ApiContext from '../ApiContext'
 
 
 
 class RecipeDetailPage extends Component {
-    constructor(props) {
-        super(props)
-        const selectedRec = this.props.match.params.recipeId  
-        const recipes = this.props.recipes   // [{}, {}]
-        let finalRecipe = {}
-        for (let recipe of recipes) {
-          if (recipe.id == selectedRec) finalRecipe = recipe
-        }
-        this.state = {
-          recipe: finalRecipe
-        }
+    static defaultProps = {
+      match: {
+        params: {}
       }
- 
+    }
+    static contextType = ApiContext  
+  
     render() {
-    const recipeid = this.props.match.params.recipeId
+      const selectedRec = this.props.match.params.recipeId  
+      const { cocktails } = this.context
+     
+      let finalRecipe = {}
+      for (let recipe of cocktails) {
+        if (recipe.id == selectedRec) finalRecipe = recipe
+      } 
+
+      console.log(this.context)
+      console.log(finalRecipe)
+
     return (
       <div className='RecipeDetail'>
-          <h2>{this.state.recipe.name}</h2>
+          <h2>{finalRecipe.name}</h2>
           <h3>Ingredients:</h3>
             <ul className='IngredientList'>
-            {this.state.recipe.ingredients.map(ingredient =>
+            {finalRecipe && finalRecipe.ingredients && finalRecipe.ingredients.split(",").map(ingredient =>
             <li key={ingredient.id}>
                 {ingredient}
             </li>
@@ -33,7 +38,7 @@ class RecipeDetailPage extends Component {
             </ul>
           <h3>Steps:</h3>
           <ul className='IngredientList'>
-            {this.state.recipe.steps.map(step =>
+          {finalRecipe && finalRecipe.steps && finalRecipe.steps.split(",").map(step =>
             <li key={step.id}>
                 {step}
             </li>
@@ -44,7 +49,7 @@ class RecipeDetailPage extends Component {
               <label>Leave a Review</label>
               <input type="text" placeholder="leave a review here"></input>
           </form>
-          <Link to={`/editrecipe/${recipeid}`}>
+          <Link to={`/editrecipe/${selectedRec}`}>
             Edit Recipe
           </Link>
       </div>

@@ -1,13 +1,20 @@
 import React, {Component} from 'react'
 import { Route, Link } from 'react-router-dom'
 import './HomePage.css'
+import ApiContext from '../ApiContext'
 
 
 
 class HomePage extends Component {
-  
+    static defaultProps = {
+      match: {
+        params: {}
+      }
+    }
+    static contextType = ApiContext
+    
     render() {
-    const cats = this.props.cats
+      const { categories=[] } = this.context
     return (
       <div className='HomePage'>
         <section className='Description'>
@@ -18,7 +25,7 @@ class HomePage extends Component {
           <h2>View Recipes!</h2>
           <p>Select cocktail category below to view recipes and start mixin'!</p>
           <ul className='CatList'>
-            {cats.map(cat =>
+            {categories.map(cat =>
             <li key={cat.id}>
                 <Link to={`/cat/${cat.id}`}>{cat.name}</Link>
             </li>

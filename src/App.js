@@ -7,26 +7,76 @@ import RecipeListPage from './RecipeListPage/RecipeListPage';
 import RecipeDetailPage from './RecipeDetailPage/RecipeDetailPage';
 import EditRecipe from './EditRecipe/EditRecipe';
 import AddRecipe from './AddRecipe/AddRecipe';
-//import ApiContext from '../ApiContext';
+import ApiContext from './ApiContext';
 //import ApiError from '../ApiError';
-//import config from '../config';
+import config from './config';
 import './App.css';
+const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
+
 
 class App extends Component {
+  state = {
+    categories: [],
+    cocktails: []
+  };
+
+  componentDidMount() {
+    Promise.all([
+        fetch(`${BASE_URL}/api/categories`, {headers: {
+            'content-type': 'application/json',
+            'Authorization': `Bearer ${config.API_KEY}`
+          }}),
+        fetch(`${BASE_URL}/api/cocktails`, {headers: {
+            'content-type': 'application/json',
+            'Authorization': `Bearer ${config.API_KEY}`
+          }})
+    ])
+        .then(([catsRes, cocktailsRes]) => {
+            if (!catsRes.ok)
+                return catsRes.json().then(e => Promise.reject(e));
+            if (!cocktailsRes.ok)
+                return cocktailsRes.json().then(e => Promise.reject(e));
+
+            return Promise.all([catsRes.json(), cocktailsRes.json()]);
+        })
+        .then(([categories, cocktails]) => {
+            //console.log(categories, cocktails)
+            this.setState({categories, cocktails});
+        })
+        //.then(console.log(this.state))
+        .catch(error => {
+            console.error({error});
+        });
+  }
+
+  addCocktail = newCocktail => {
+    const _this = this
+    this.setState({
+        cocktails: this.state.cocktails.concat(newCocktail)
+    }, 
+)}
+
 
   render() {
+    const value = {
+      categories: this.state.categories,
+      cocktails: this.state.cocktails,
+      addCocktail: this.addCocktail
+  };
     return (
-      <div className="App">
-          <Header />
-          <main>
-            <Route exact path="/" render={()=><HomePage cats={this.props.cats} recipes={this.props.recipes}/>} />
-            <Route path="/cat/:catId" render={(props)=><RecipeListPage cats={this.props.cats} recipes={this.props.recipes} {...props} />} />
-            <Route path="/recipe/:recipeId" render={(props)=><RecipeDetailPage cats={this.props.cats} recipes={this.props.recipes} {...props} />} />
-            <Route path="/editrecipe/:recipeId" render={(props)=><EditRecipe cats={this.props.cats} recipes={this.props.recipes} {...props} />} />
-            <Route path="/addrecipe" render={(props)=><AddRecipe cats={this.props.cats} recipes={this.props.recipes} {...props} />} />
-          </main>
-          <Footer />
-      </div>
+      <ApiContext.Provider value={{...this.state, addCocktail: this.addCocktail}}>
+        <div className="App">
+            <Header />
+            <main>
+              <Route exact path="/" component = {HomePage} />
+              <Route path="/cat/:catId" component = {RecipeListPage} />
+              <Route path="/recipe/:recipeId" component = {RecipeDetailPage} />
+              <Route path="/editrecipe/:recipeId" component = {EditRecipe} />
+              <Route path="/addrecipe" component = {AddRecipe} />
+            </main>
+            <Footer />
+        </div>
+      </ApiContext.Provider>
     );
   } 
 }
