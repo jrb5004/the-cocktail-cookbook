@@ -49,22 +49,35 @@ class App extends Component {
         });
   }
 
+
   addCocktail = newCocktail => {
-    const _this = this
+    console.log(this.state.cocktails)
     this.setState({
-        cocktails: this.state.cocktails.concat(newCocktail)
+      cocktails: [...this.state.cocktails, newCocktail]
     }, 
+    console.log(this.state.cocktails)
 )}
 
+  updateRecipe = updatedCocktail => {
+    const newCocktails = this.state.cocktails.map(cocktail =>
+        (cocktail.id === updatedCocktail.id)
+            ? updatedCocktail
+            : cocktail
+    )
+    this.setState({
+        cocktails: newCocktails
+    })
+}
 
   render() {
     const value = {
       categories: this.state.categories,
       cocktails: this.state.cocktails,
-      addCocktail: this.addCocktail
+      addCocktail: this.addCocktail,
+      updateCocktai: this.updateRecipe
   };
     return (
-      <ApiContext.Provider value={{...this.state, addCocktail: this.addCocktail}}>
+      <ApiContext.Provider value={{...this.state, addCocktail: this.addCocktail, updateRecipe: this.updateRecipe, addReview: this.addReview}}>
         <div className="App">
             <Header />
             <main>

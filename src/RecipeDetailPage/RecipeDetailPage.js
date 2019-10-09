@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Route, Link } from 'react-router-dom'
 import './RecipeDetailPage.css'
 import ApiContext from '../ApiContext'
-
+import ReviewForm from '../ReviewForm/ReviewForm'
 
 
 class RecipeDetailPage extends Component {
@@ -30,28 +30,34 @@ class RecipeDetailPage extends Component {
           <h2>{finalRecipe.name}</h2>
           <h3>Ingredients:</h3>
             <ul className='IngredientList'>
-            {finalRecipe && finalRecipe.ingredients && finalRecipe.ingredients.split(",").map(ingredient =>
-            <li key={ingredient.id}>
+            {finalRecipe && finalRecipe.ingredients && finalRecipe.ingredients.split(",").map((ingredient, index) =>
+            <li key={index}>
                 {ingredient}
             </li>
             )}
             </ul>
           <h3>Steps:</h3>
           <ul className='IngredientList'>
-          {finalRecipe && finalRecipe.steps && finalRecipe.steps.split(",").map(step =>
-            <li key={step.id}>
+          {finalRecipe && finalRecipe.steps && finalRecipe.steps.split(",").map((step, index) =>
+            <li key={index}>
                 {step}
             </li>
             )}
             </ul>
-          <h3>Reviews:</h3>
-          <form>
-              <label>Leave a Review</label>
-              <input type="text" placeholder="leave a review here"></input>
-          </form>
           <Link to={`/editrecipe/${selectedRec}`}>
-            Edit Recipe
+            <button>Edit Recipe</button>
           </Link>
+          <h3>Reviews:</h3>
+          <ul className='ReviewList'>
+          {finalRecipe && finalRecipe.reviews && finalRecipe.reviews.split(",").map((review, index) =>
+            <li key={index}>
+                {review}
+            </li>
+            )}
+            </ul>
+          <div className="ReviewForm">
+            <ReviewForm />
+          </div>
       </div>
     )
   }

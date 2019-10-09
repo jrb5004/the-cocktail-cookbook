@@ -20,7 +20,8 @@ class AddRecipe extends Component {
           name: '',
           category_id: '',
           ingredients: [],
-          steps: []
+          steps: [],
+          reviews: []
       }
       this.handleAddRecipe = this.handleAddRecipe.bind(this)
     } 
@@ -70,18 +71,20 @@ class AddRecipe extends Component {
         name: this.state.name,
         category_id: this.state.category_id,
         ingredients: this.state.ingredients,
-        steps: this.state.steps
+        steps: this.state.steps,
+        reviews: this.state.reviews
       }
-  
-      fetch(`${config.BASE_URL}/api/cocktails`, {
+      
+      fetch(`${BASE_URL}/api/cocktails`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
           'Authorization': `Bearer ${config.API_KEY}`
         },
         body: JSON.stringify(body)
+       
       })
-  
+      
         .then(res => {
           if (!res.ok)
             return res.json().then(e => Promise.reject(e))
@@ -89,7 +92,6 @@ class AddRecipe extends Component {
         })
         .then((cocktail) => {
           this.context.addCocktail(cocktail)
-          this.props.addCocktail(cocktail)
           this.props.history.push("/")
         })
         .catch(error => {
@@ -101,7 +103,7 @@ class AddRecipe extends Component {
     
     return (
       <div className='EditRecipe'>
-          <form>
+          <form onSubmit={this.handleAddRecipe}>
           <h2>Add New Recipe</h2>
           <div>
             <p>Select Category</p>

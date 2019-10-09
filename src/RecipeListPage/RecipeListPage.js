@@ -25,8 +25,6 @@ class RecipeListPage extends Component {
       if (recipe.category_id == selectedCat) finalRecipes.push(recipe)
     }
 
-   console.log(this.context)
-
     return (
       <div className='RecipeList'>
         <h2>{finalCat.name}</h2>

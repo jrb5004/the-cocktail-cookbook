@@ -4,6 +4,8 @@ const ApiContext = React.createContext({
   categories: [],
   cocktails: [],
   addCocktail: () => {},
+  updateRecipe: () => {},
+  addReview: () => {},
 })
 
 export default ApiContext
