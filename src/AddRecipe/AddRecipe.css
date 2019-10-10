@@ -1,3 +1,45 @@
 button {
     margin: 20px 0;
 }
+
+select {
+    margin-bottom: 2%;
+}
+
+.NameInput {
+    width: 40%;
+    height: 35px;
+}
+
+.EditRecipe {
+    border: 1px solid darkblue;
+    margin: 5% 15%;
+}
+
+.IngredientsInput {
+    width: 40%;
+    height: 35px;
+    display: inline-block;
+}
+
+.StepButton {
+    display: inline-block;
+    height: 35px;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+ol {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    border: 1px solid darkblue;
+    margin-bottom: 5px;
+}
+

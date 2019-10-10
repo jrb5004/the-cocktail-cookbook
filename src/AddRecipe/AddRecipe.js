@@ -21,7 +21,9 @@ class AddRecipe extends Component {
           category_id: '',
           ingredients: [],
           steps: [],
-          reviews: []
+          reviews: [],
+          newIngredient: '',
+          newStep: ''
       }
       this.handleAddRecipe = this.handleAddRecipe.bind(this)
     } 
@@ -47,16 +49,49 @@ class AddRecipe extends Component {
       })
     }
 
-    setIngredients(event) {
+    /* setIngredients(event) {
       this.setState({
           ingredients:event.target.value.split(",")
       })
-    }
+    } */
 
-    setSteps(event) {
+    /* setSteps(event) {
       this.setState({
           steps:event.target.value.split(",")
       })
+    } */
+
+
+    addStep(e) {
+      e.preventDefault();
+      this.setState({
+        steps: [...this.state.steps, this.state.newStep],
+        newStep: ''
+      });
+    }
+
+    removeStep(index) {
+      let temp = this.state.steps;
+      temp.splice(index, 1);
+      this.setState({
+        steps: temp
+      });
+    }
+
+    addIngredient(e) {
+      e.preventDefault();
+      this.setState({
+        ingredients: [...this.state.ingredients, this.state.newIngredient],
+        newIngredient: ''
+      });
+    }
+
+    removeIngredient(index) {
+      let temp = this.state.ingredients;
+      temp.splice(index, 1);
+      this.setState({
+        ingredients: temp
+      });
     }
 
     handleAddRecipe = e => {
@@ -106,7 +141,7 @@ class AddRecipe extends Component {
           <form onSubmit={this.handleAddRecipe}>
           <h2>Add New Recipe</h2>
           <div>
-            <p>Select Category</p>
+            <p>Select Category:</p>
             <select name="category" onChange={(e) => this.setCategory(e)} >
               <option> Select a Category </option>
               <option value="highballs">Highballs</option>
@@ -115,15 +150,47 @@ class AddRecipe extends Component {
               <option value="flips fizzes others">Flips, Fizzes and Others</option>
             </select><br></br>
             <label htmlFor="name">Cocktail Name:</label>
-            <input type="text" name='name' id='name' onChange={(e) => this.setName(e)} required/>
+            <input className='NameInput' type="text" name='name' id='name' onChange={(e) => this.setName(e)} required/>
           </div>
           <div>
-            <label htmlFor="name">Ingredients:</label>
-            <input type="text" name='ingredients' id='ingredients' onChange={(e) => this.setIngredients(e)} />
+            <h4>Ingredients:</h4>
+                <ol>
+                {this.state.ingredients.map((ingredient, index) => {
+                  return (
+                    <li key={index}>
+                      {ingredient} <p onClick={() => this.removeIngredient(index)}>X</p>
+                    </li>
+                  );
+                })}
+              </ol>
+              <input
+                value={this.state.newIngredient}
+                onChange={e => this.setState({ newIngredient: e.target.value })}
+                placeholder="enter new ingredient"
+                className='IngredientsInput'
+                required
+              />
+              <button className='StepButton' onClick={e => this.addIngredient(e)}>SUBMIT</button>
           </div>
           <div>
-            <label htmlFor="steps">Steps:</label>
-            <input type="text" name='stpes' id='steps' onChange={(e) => this.setSteps(e)} />
+              <h4>Steps:</h4>
+              <ol>
+              {this.state.steps.map((step, index) => {
+                return (
+                  <li key={index}>
+                    {step} <p onClick={() => this.removeStep(index)}>X</p>
+                  </li>
+                );
+              })}
+            </ol>
+            <input
+              value={this.state.newStep}
+              onChange={e => this.setState({ newStep: e.target.value })}
+              placeholder="enter new step"
+              className='IngredientsInput'
+              required
+            />
+            <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
           </div>
           <button type="submit">Submit Recipe!</button>
         </form>
