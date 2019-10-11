@@ -11,7 +11,7 @@ import ApiContext from './ApiContext';
 //import ApiError from '../ApiError';
 import config from './config';
 import './App.css';
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
 
 
 class App extends Component {

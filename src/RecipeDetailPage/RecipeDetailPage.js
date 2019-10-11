@@ -4,7 +4,7 @@ import './RecipeDetailPage.css'
 import ApiContext from '../ApiContext'
 import ReviewForm from '../ReviewForm/ReviewForm'
 import config from '../config'
-const BASE_URL = 'http://localhost:8000'
+
 class RecipeDetailPage extends Component {
    state = {
      recipe: {}
@@ -17,25 +17,7 @@ class RecipeDetailPage extends Component {
    static contextType = ApiContext
    componentDidMount() {
      setTimeout(() => { console.log(this.context) }, 3000)
-     /*
-     fetch(${BASE_URL}/api/cocktails/${this.props.match.params.recipeId},
-     {headers: {
-       'content-type': 'application/json',
-       'Authorization': Bearer ${config.API_KEY}
-     }})
-     .then(res => {
-       if (!res.ok)
-             return res.json().then(e => Promise.reject(e));
-         return res.json();
-     })
-     .then((cocktail) => {
-       this.setState({recipe: cocktail})
-       console.log(this.state)
-     })
-     .catch(error => {
-         console.error({error});
-     });
-     */
+
    }
    _getRecipe() {
     let recipes = this.context.cocktails

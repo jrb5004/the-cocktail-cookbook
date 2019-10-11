@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom"
 import './AddRecipe.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
 
 
 
