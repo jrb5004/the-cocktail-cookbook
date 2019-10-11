@@ -11,7 +11,7 @@ import ApiContext from './ApiContext';
 //import ApiError from '../ApiError';
 import config from './config';
 import './App.css';
-const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
+const BASE_URL = 'http://localhost:8000'
 
 
 class App extends Component {
@@ -59,6 +59,7 @@ class App extends Component {
 )}
 
   updateRecipe = updatedCocktail => {
+    console.log(updatedCocktail)
     const newCocktails = this.state.cocktails.map(cocktail =>
         (cocktail.id === updatedCocktail.id)
             ? updatedCocktail

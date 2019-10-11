@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom"
 import './EditRecipe.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
+const BASE_URL = 'http://localhost:8000'
 
 
 class EditRecipe extends Component {
@@ -114,11 +114,7 @@ class EditRecipe extends Component {
       return (
         <div className='EditRecipe'>
             <form onSubmit={this.handleUpdateRecipe}>
-            <h2>Edit Recipe</h2>
-            <div>
-              <label htmlFor="name">Cocktail Name:</label>
-              <input type="text" name='name' id='name' value= {name} onChange={(e) => this.setName(e)} required/>
-            </div>
+            <h2>Edit Recipe: {this.state.name}</h2>
             <div>
               <label htmlFor="name">Ingredients:</label>
               <input type="text" name='ingredients' id='ingredients' value= {ingredients} onChange={(e) => this.setIngredients(e)} required/>

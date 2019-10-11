@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom"
 import './ReviewForm.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
+const BASE_URL = 'http://localhost:8000'
 
 
 class ReviewForm extends Component {
@@ -20,13 +20,6 @@ class ReviewForm extends Component {
       }
       this.handleNewReview = this.handleNewReview.bind(this)
     } 
-
-    /* setReview = event => {
-        const newReview = this.state.reviews.push(event.target.value)
-        this.setState({
-            reviews: newReview
-        })
-    } */
 
     setReview(event) {
         this.setState({
@@ -65,11 +58,13 @@ class ReviewForm extends Component {
           console.log(res)
           if (!res.ok)
             return (Promise.reject('Reject error'))
-          return 
+          return res.json() 
         })
-        .then(() => {
-          this.context.updateRecipe(recipeId)
-          this.props.history.goBack()
+        .then((recipe) => {
+          this.context.updateRecipe(recipe)
+          this.setState ({
+            review: ''
+          })
         })
         .catch(error => {
           console.error({ error })
@@ -82,7 +77,7 @@ class ReviewForm extends Component {
           <form onSubmit={this.handleNewReview}>
               <div>
                 <label>Leave a Review</label>
-                <input type="text" name="review" placeholder="leave a review here" onChange={(e) => this.setReview(e)} required></input>
+                <input type="text" name="review" placeholder="leave a review here" value={this.state.review} onChange={(e) => this.setReview(e)} required></input>
               </div>
               <button type="submit">Submit Review!</button>  
           </form>

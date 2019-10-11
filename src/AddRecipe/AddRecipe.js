@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom"
 import './AddRecipe.css'
 import ApiContext from '../ApiContext'
 import config from '../config'
-const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
+const BASE_URL = 'http://localhost:8000'
 
 
 
@@ -48,19 +48,6 @@ class AddRecipe extends Component {
           category_id: convertedName
       })
     }
-
-    /* setIngredients(event) {
-      this.setState({
-          ingredients:event.target.value.split(",")
-      })
-    } */
-
-    /* setSteps(event) {
-      this.setState({
-          steps:event.target.value.split(",")
-      })
-    } */
-
 
     addStep(e) {
       e.preventDefault();
