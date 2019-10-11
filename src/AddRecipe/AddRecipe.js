@@ -155,7 +155,6 @@ class AddRecipe extends Component {
                 onChange={e => this.setState({ newIngredient: e.target.value })}
                 placeholder="enter new ingredient"
                 className='IngredientsInput'
-                required
               />
               <button className='StepButton' onClick={e => this.addIngredient(e)}>SUBMIT</button>
           </div>
@@ -175,7 +174,6 @@ class AddRecipe extends Component {
               onChange={e => this.setState({ newStep: e.target.value })}
               placeholder="enter new step"
               className='IngredientsInput'
-              required
             />
             <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
           </div>
