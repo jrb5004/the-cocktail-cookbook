@@ -33,7 +33,7 @@ class HomePage extends Component {
           </ul>
         </section>
         <section>
-        <p className="AddRecipe">Have a great recipe not found in the cookbook?  Add it <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span></Link>.</p>
+        <p className="AddRecipeParagraph">Have a great recipe not found in the cookbook?  Add it <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span></Link>.</p>
       </section>
       </div>
     )

@@ -17,35 +17,41 @@
     background-color: #f3ded8;
 }
 
+.IngredientList li {
+    margin: 2% 0;
+    padding: 0 2%;
+}
+
 .CurrentReviews li {
     width: 90%;
     text-align: left;
     padding: 5% 2%;
     border: 1px solid darkblue;
-    margin: 5px auto;
+    margin: 7px auto;
+    
 }
 
-
-input {
+.RecipeDetail input {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 30%;
+    width: 80%;
     height: 60px;
 }
 
-button {
+.RecipeDetail button {
     background-color: #f3ded8;
     color: darkblue;
     width: 20%;
     height: 35px;
     font-weight: bold; 
     box-shadow: 1px 1px 1px 1px darkblue;
+    margin-bottom: 2%;
 
 }
 
-h2 {
+.RecipeDetail h2 {
     margin-bottom: 3%;
 }

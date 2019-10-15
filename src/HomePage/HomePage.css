@@ -8,26 +8,14 @@
     font-size: 18px;
 }
 
-p {
+.Description p {
     text-align: center;
     padding: 2% 5%;
+    margin: 5% 0;
 }
 
-.Description p {
-    margin-bottom: 10px;
-}
-
-h2 {
+.ViewCocktails h2 {
     padding: 0;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    text-align: center;
 }
 
 .ViewCocktails {
@@ -39,12 +27,16 @@ li {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #f3ded8;
-    min-height: 40%;
+    min-height: 35%;
 }
 
 .ViewCocktails p {
-    margin: 0;
+    margin: 2% 0;
     padding: 0 2px;
+}
+
+.ViewCocktails li {
+    margin: 2% 0;
 }
 
 .AddRecipe {
@@ -54,7 +46,12 @@ li {
 
 .AddRecipeLink
 {
-    color: #f3ded8;
+    color: #E9BEB5;
     text-decoration: underline;
+}
+
+.AddRecipeParagraph {
+    padding: 0 2%;
+    margin-top: 8%;
 }
 

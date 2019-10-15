@@ -139,7 +139,7 @@ class AddRecipe extends Component {
     render() {
     
     return (
-      <div className='AddRecipeForm'>
+      <div className='AddEditRecipeForm'>
           <form onSubmit={this.handleAddRecipe}>
           <h2>Add New Recipe</h2>
           <div>
@@ -156,7 +156,7 @@ class AddRecipe extends Component {
           </div>
           <div>
             <h4>Ingredients:</h4>
-                <ol>
+                <ol className='StepIngList'>
                 {this.state.ingredients.map((ingredient, index) => {
                   return (
                     <li key={index}>
@@ -170,12 +170,17 @@ class AddRecipe extends Component {
                 onChange={e => this.setState({ newIngredient: e.target.value })}
                 placeholder="enter new ingredient"
                 className='IngredientsInput'
+                onKeyPress={event => {
+                  if (event.key === 'Enter') {
+                    this.addIngredient(event)
+                  }
+                }}
               />
               <button className='StepButton' onClick={e => this.addIngredient(e)}>SUBMIT</button>
           </div>
           <div>
               <h4>Steps:</h4>
-              <ol>
+              <ol className='StepIngList'>
               {this.state.steps.map((step, index) => {
                 return (
                   <li key={index}>
@@ -189,10 +194,15 @@ class AddRecipe extends Component {
               onChange={e => this.setState({ newStep: e.target.value })}
               placeholder="enter new step"
               className='IngredientsInput'
+              onKeyPress={event => {
+                if (event.key === 'Enter') {
+                  this.addStep(event)
+                }
+              }}
             />
             <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
           </div>
-          <button type="submit">Submit Recipe!</button>
+          <button type="submit" className='AddEditSubmitButton'>Submit Recipe!</button>
         </form>
       </div>
     )

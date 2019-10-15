@@ -36,7 +36,7 @@ class RecipeListPage extends Component {
             </li>
             )}
           </ul>
-        <p>Have a great {finalCat.name} recipe not listed above?  Add it to the collection <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span>.</Link></p>
+        <p className='AddCatRecipe'>Have a great {finalCat.name} recipe not listed above?  Add it to the collection <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span>.</Link></p>
       </div>
     )
  }

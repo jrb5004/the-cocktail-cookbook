@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
 
-main {
-    font-size: 16px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.RecipeList {
+    font-size: 18px;
 }
 
 .RecipeDesc {
@@ -17,18 +13,28 @@ main {
     border: 3px groove darkblue;
     border-radius: 5px;
     text-align: center;
-    margin: 15% 5%;
+    margin: 15% auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #f3ded8;
-    min-height: 50%;
+    width: 70%;
 }
 
-ul {
+.RecipeListMain {
     padding: 10px 0;
+}
+
+.RecipeListMain li {
+    margin: 2% auto;
 }
 
 .RecipeName {
     margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.AddCatRecipe {
+    margin-bottom: 5%;
+    padding: 0 2%;
 }

@@ -136,12 +136,12 @@ class EditRecipe extends Component {
     render() {
       const { name, ingredients, steps } = this.state
       return (
-        <div className='AddRecipeForm'>
+        <div className='AddEditRecipeForm'>
           <form onSubmit={this.handleUpdateRecipe}>
           <h2>Edit Recipe</h2>
           <div>
             <h4>Ingredients:</h4>
-                <ol>
+                <ol className='StepIngList'>
                 {this.state.ingredients.map((ingredient, index) => {
                   return (
                     <li key={index}>
@@ -165,7 +165,7 @@ class EditRecipe extends Component {
           </div>
           <div>
               <h4>Steps:</h4>
-              <ol>
+              <ol className='StepIngList'>
               {this.state.steps.map((step, index) => {
                 return (
                   <li key={index}>
@@ -187,7 +187,7 @@ class EditRecipe extends Component {
             />
             <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
           </div>
-          <button type="submit">Submit Recipe!</button>
+          <button className='AddEditSubmitButton' type="submit">Submit Recipe!</button>
         </form>
       </div>
       )
