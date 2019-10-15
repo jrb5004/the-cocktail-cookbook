@@ -27,16 +27,16 @@ class RecipeListPage extends Component {
 
     return (
       <div className='RecipeList'>
-        <h2>{finalCat.name}</h2>
-        <p>{finalCat.description}</p>
-        <ul className='RecipeList'>
+        <h2 className='RecipeName'>{finalCat.name}</h2>
+        <p className="RecipeDesc">{finalCat.description}</p>
+        <ul className='RecipeListMain'>
             {finalRecipes.map(cocktail =>
             <li key={cocktail.id}>
                 <Link to={`/recipe/${cocktail.id}`}>{cocktail.name}</Link>
             </li>
             )}
           </ul>
-        <p>Have a great {finalCat.name} recipe not listed above?  Add it to the collection <Link to={`/addrecipe`}>here</Link>.</p>
+        <p>Have a great {finalCat.name} recipe not listed above?  Add it to the collection <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span>.</Link></p>
       </div>
     )
  }

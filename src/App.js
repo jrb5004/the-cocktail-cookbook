@@ -65,6 +65,7 @@ class App extends Component {
             ? updatedCocktail
             : cocktail
     )
+    console.log(newCocktails)
     this.setState({
         cocktails: newCocktails
     })

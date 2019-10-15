@@ -38,6 +38,7 @@ class RecipeDetailPage extends Component {
   // const {recipe} = this.state
    return (
      <div className='RecipeDetail'>
+       <section className='ActualRecipe'>
          <h2>{this._getRecipe().name}</h2>
          <h3>Ingredients:</h3>
            <ul className='IngredientList'>
@@ -55,9 +56,11 @@ class RecipeDetailPage extends Component {
            </li>
            )}
            </ul>
+        </section>
          <Link to={`/editrecipe/${this._getRecipe().id}`}>
            <button>Edit Recipe</button>
          </Link>
+        <section className="CurrentReviews">
          <h3>Reviews:</h3>
          <ul className='ReviewList'>
          {this._getRecipe() && this._getRecipe().reviews && this._getRecipe().reviews.map((review, index) =>
@@ -66,9 +69,10 @@ class RecipeDetailPage extends Component {
            </li>
            )}
            </ul>
-         <div className="ReviewForm">
-           <ReviewForm />
-         </div>
+        </section>
+        <section className="ReviewForm">
+          <ReviewForm />
+        </section>
      </div>
    )
  }

@@ -76,8 +76,8 @@ class ReviewForm extends Component {
         <div className='NewReview'>
           <form onSubmit={this.handleNewReview}>
               <div>
-                <label>Leave a Review</label>
-                <input type="text" name="review" placeholder="leave a review here" value={this.state.review} onChange={(e) => this.setReview(e)} required></input>
+                <h3>Leave a Review:</h3>
+                <input type="text" name="review" placeholder="enter review here" value={this.state.review} onChange={(e) => this.setReview(e)} required></input>
               </div>
               <button type="submit">Submit Review!</button>  
           </form>

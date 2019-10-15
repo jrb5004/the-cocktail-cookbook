@@ -18,7 +18,9 @@ class EditRecipe extends Component {
       this.state = {
           name: '',
           ingredients: [],
-          steps: []
+          steps: [],
+          newIngredient: '',
+          newStep: ''
       }
       this.handleUpdateRecipe = this.handleUpdateRecipe.bind(this)
     } 
@@ -53,16 +55,36 @@ class EditRecipe extends Component {
       })
     }
 
-    setIngredients(event) {
+    addStep(e) {
+      e.preventDefault();
       this.setState({
-          ingredients:event.target.value.split(",")
-      })
+        steps: [...this.state.steps, this.state.newStep],
+        newStep: ''
+      });
     }
 
-    setSteps(event) {
+    removeStep(index) {
+      let temp = this.state.steps;
+      temp.splice(index, 1);
       this.setState({
-          steps:event.target.value.split(",")
-      })
+        steps: temp
+      });
+    }
+
+    addIngredient(e) {
+      e.preventDefault();
+      this.setState({
+        ingredients: [...this.state.ingredients, this.state.newIngredient],
+        newIngredient: ''
+      });
+    }
+
+    removeIngredient(index) {
+      let temp = this.state.ingredients;
+      temp.splice(index, 1);
+      this.setState({
+        ingredients: temp
+      });
     }
 
     handleUpdateRecipe = e => {
@@ -98,11 +120,13 @@ class EditRecipe extends Component {
           console.log(res)
           if (!res.ok)
             return (Promise.reject('Reject error'))
-          return 
+          return (res.json())
+        })
+        .then((resCocktail) => {
+          this.context.updateRecipe(resCocktail)
         })
         .then(() => {
-          this.context.updateRecipe(recipeId)
-          this.props.history.goBack()
+          {this.props.history.goBack()}
         })
         .catch(error => {
           console.error({ error })
@@ -112,20 +136,60 @@ class EditRecipe extends Component {
     render() {
       const { name, ingredients, steps } = this.state
       return (
-        <div className='EditRecipe'>
-            <form onSubmit={this.handleUpdateRecipe}>
-            <h2>Edit Recipe: {this.state.name}</h2>
-            <div>
-              <label htmlFor="name">Ingredients:</label>
-              <input type="text" name='ingredients' id='ingredients' value= {ingredients} onChange={(e) => this.setIngredients(e)} required/>
-            </div>
-            <div>
-              <label htmlFor="steps">Steps:</label>
-              <input type="text" name='steps' id='steps' value={steps} onChange={(e) => this.setSteps(e)} required/>
-            </div>
-            <button type="submit">Submit Update!</button>
-          </form>
-        </div>
+        <div className='AddRecipeForm'>
+          <form onSubmit={this.handleUpdateRecipe}>
+          <h2>Edit Recipe</h2>
+          <div>
+            <h4>Ingredients:</h4>
+                <ol>
+                {this.state.ingredients.map((ingredient, index) => {
+                  return (
+                    <li key={index}>
+                      {ingredient} <p onClick={() => this.removeIngredient(index)}>X</p>
+                    </li>
+                  );
+                })}
+              </ol>
+              <input
+                value={this.state.newIngredient}
+                onChange={e => this.setState({ newIngredient: e.target.value })}
+                placeholder="enter new ingredient"
+                className='IngredientsInput'
+                onKeyPress={event => {
+                  if (event.key === 'Enter') {
+                    this.addIngredient(event)
+                  }
+                }}
+              />
+              <button className='StepButton' onClick={e => this.addIngredient(e)}>SUBMIT</button>
+          </div>
+          <div>
+              <h4>Steps:</h4>
+              <ol>
+              {this.state.steps.map((step, index) => {
+                return (
+                  <li key={index}>
+                    {step} <p onClick={() => this.removeStep(index)}>X</p>
+                  </li>
+                );
+              })}
+            </ol>
+            <input
+              value={this.state.newStep}
+              onChange={e => this.setState({ newStep: e.target.value })}
+              placeholder="enter new step"
+              className='IngredientsInput'
+              onKeyPress={event => {
+                if (event.key === 'Enter') {
+                  this.addStep(event)
+                }
+              }}
+            />
+            <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
+          </div>
+          <button type="submit">Submit Recipe!</button>
+        </form>
+      </div>
       )
   }
 }

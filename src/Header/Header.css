@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
 
 .Header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    color: darkblue;
-    font-size: 40px;
+
+    background-image: url("../Images/cocktails.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #E9BEB5;
+    font-size: 24px;
     font-family:'Mansalva', cursive;
+    height: 9rem;
 }
 
 h1 {
     margin-bottom: 0;
     margin-top: 10px;
+    color: #E9BEB5;
 }
 
 a {
@@ -28,21 +29,3 @@ a:visited {
     color: darkblue;
 }
 
-.logos {
-    padding-bottom: 20px;
-}
-
-img {
-    width: 60px;
-    height: 60px;
-    margin-top: 50px;
-    margin-left: 15px;
-}
-
-span {
-    color: #E9BEB5;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 90px;
-    padding-top: 35px;
-    padding-left: 12px;
-}

@@ -83,9 +83,24 @@ class AddRecipe extends Component {
 
     handleAddRecipe = e => {
       e.preventDefault()
+
+      if (!this.state.category_id) { 
+        alert('category is required') 
+        return 
+      }
   
       if (!this.state.name || this.state.name.trim() == '') { 
         alert('name is required') 
+        return 
+      }
+
+      if (!this.state.ingredients) { 
+        alert('ingredients are required') 
+        return 
+      }
+
+      if (!this.state.steps) { 
+        alert('steps are required') 
         return 
       }
   
@@ -124,7 +139,7 @@ class AddRecipe extends Component {
     render() {
     
     return (
-      <div className='EditRecipe'>
+      <div className='AddRecipeForm'>
           <form onSubmit={this.handleAddRecipe}>
           <h2>Add New Recipe</h2>
           <div>
@@ -137,7 +152,7 @@ class AddRecipe extends Component {
               <option value="flips fizzes others">Flips, Fizzes and Others</option>
             </select><br></br>
             <label htmlFor="name">Cocktail Name:</label>
-            <input className='NameInput' type="text" name='name' id='name' onChange={(e) => this.setName(e)} required/>
+            <input className='NameInput' placeholder="enter cocktail name" type="text" name='name' id='name' onChange={(e) => this.setName(e)} required/>
           </div>
           <div>
             <h4>Ingredients:</h4>

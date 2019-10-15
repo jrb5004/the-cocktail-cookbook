@@ -13,11 +13,6 @@ class Header extends Component {
           <Link to={`/`}>
           <h1>The Cocktail Cookbook</h1>
           </Link>
-          <div className = "logos">
-            <img src={Logo} alt="drink logo" />
-            <span>|</span>
-            <img src={Cookbook} alt="cookbook logo" />
-          </div>
       </section>
     )
   }

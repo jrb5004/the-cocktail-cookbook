@@ -19,7 +19,7 @@ class HomePage extends Component {
       <div className='HomePage'>
         <section className='Description'>
           <p>The Cocktail Cookbook provides the professional mixologist, the amatuer house-party bartender, and everyone inbetween, a convenient repository of cocktail recipes organized by category!</p>
-          <p>View and edit recipes, add your own recipes to the collection, and leave comments with your feedback/rating.</p>
+          <p>View and edit recipes, add your own recipes to the collection, and leave comments with your feedback.</p>
         </section>
         <section className='ViewCocktails'>
           <h2>View Recipes!</h2>
@@ -33,7 +33,7 @@ class HomePage extends Component {
           </ul>
         </section>
         <section>
-        <p className="AddRecipe">Have a great recipe not found in the cookbook?  Add it <Link to={`/addrecipe`}>here</Link>.</p>
+        <p className="AddRecipe">Have a great recipe not found in the cookbook?  Add it <Link to={`/addrecipe`}><span className="AddRecipeLink">here</span></Link>.</p>
       </section>
       </div>
     )

@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
 
 .Footer {
+    position: relative;
+    bottom: 0;
     width: 100%;
-    background-color: lightblue;
+    background-color: #f3ded8;
     border-top: 3px solid darkblue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 2.5rem;
-    position: aboslute;
-    bottom: 0;
-    margin-top: 10%;
 }
 
 .name, .contact {
-    font-size: 18px;
+    font-size: 14px;
     color: darkblue;
     padding: 0;
     
