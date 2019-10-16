@@ -42,7 +42,6 @@ class EditRecipe extends Component {
         cocktails.steps = cocktails.steps.split(',')
         cocktails.ingredients = cocktails.ingredients.split(',')   
         this.setState({ ...cocktails})
-        console.log(this.state)
       })
       .catch(error => {
           console.error({error});
@@ -89,7 +88,6 @@ class EditRecipe extends Component {
 
     handleUpdateRecipe = e => {
       e.preventDefault()
-      console.log (this.state)
   
       const { recipeId } = this.props.match.params
   
@@ -104,9 +102,6 @@ class EditRecipe extends Component {
         steps: this.state.steps
       }
   
-      console.log(body)
-  
-  
       fetch(`${BASE_URL}/api/cocktails/${recipeId}`, {
         headers: {
           'content-type': 'application/json',
@@ -117,7 +112,6 @@ class EditRecipe extends Component {
       })
   
         .then(res => {
-          console.log(res)
           if (!res.ok)
             return (Promise.reject('Reject error'))
           return (res.json())
@@ -153,7 +147,7 @@ class EditRecipe extends Component {
               <input
                 value={this.state.newIngredient}
                 onChange={e => this.setState({ newIngredient: e.target.value })}
-                placeholder="enter new ingredient"
+                placeholder='enter new ingredient'
                 className='IngredientsInput'
                 onKeyPress={event => {
                   if (event.key === 'Enter') {
@@ -177,7 +171,7 @@ class EditRecipe extends Component {
             <input
               value={this.state.newStep}
               onChange={e => this.setState({ newStep: e.target.value })}
-              placeholder="enter new step"
+              placeholder='enter new step'
               className='IngredientsInput'
               onKeyPress={event => {
                 if (event.key === 'Enter') {
@@ -187,7 +181,7 @@ class EditRecipe extends Component {
             />
             <button className='StepButton' onClick={e => this.addStep(e)}>SUBMIT</button>
           </div>
-          <button className='AddEditSubmitButton' type="submit">Submit Recipe!</button>
+          <button className='AddEditSubmitButton' type='submit'>Submit Recipe!</button>
         </form>
       </div>
       )

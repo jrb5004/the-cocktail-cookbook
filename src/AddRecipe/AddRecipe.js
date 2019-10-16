@@ -6,7 +6,6 @@ import config from '../config'
 const BASE_URL = 'https://damp-reaches-42499.herokuapp.com'
 
 
-
 class AddRecipe extends Component {
     static defaultProps ={
       addCocktail: () => {},
@@ -29,10 +28,10 @@ class AddRecipe extends Component {
     } 
 
     convertCategoryName(name) {
-      if (name === "highballs") return 1;
-      else if (name === "sours") return 2;
-      else if (name === "stirred") return 3;
-      else if (name === "flips fizzes others") return 4;
+      if (name === 'highballs') return 1;
+      else if (name === 'sours') return 2;
+      else if (name === 'stirred') return 3;
+      else if (name === 'flips fizzes others') return 4;
     } 
 
     setName(event) {
@@ -144,15 +143,15 @@ class AddRecipe extends Component {
           <h2>Add New Recipe</h2>
           <div>
             <p>Select Category:</p>
-            <select name="category" onChange={(e) => this.setCategory(e)} >
+            <select name='category' onChange={(e) => this.setCategory(e)} >
               <option> Select a Category </option>
-              <option value="highballs">Highballs</option>
-              <option value="sours">Sours</option>
-              <option value="stirred">Stirred</option>
-              <option value="flips fizzes others">Flips, Fizzes and Others</option>
+              <option value='highballs'>Highballs</option>
+              <option value='sours'>Sours</option>
+              <option value='stirred'>Stirred</option>
+              <option value='flips fizzes others'>Flips, Fizzes and Others</option>
             </select><br></br>
-            <label htmlFor="name">Cocktail Name:</label>
-            <input className='NameInput' placeholder="enter cocktail name" type="text" name='name' id='name' onChange={(e) => this.setName(e)} required/>
+            <label htmlFor='name'>Cocktail Name:</label>
+            <input className='NameInput' placeholder='enter cocktail name' type='text' name='name' id='name' onChange={(e) => this.setName(e)} required/>
           </div>
           <div>
             <h4>Ingredients:</h4>
@@ -168,7 +167,7 @@ class AddRecipe extends Component {
               <input
                 value={this.state.newIngredient}
                 onChange={e => this.setState({ newIngredient: e.target.value })}
-                placeholder="enter new ingredient"
+                placeholder='enter new ingredient'
                 className='IngredientsInput'
                 onKeyPress={event => {
                   if (event.key === 'Enter') {
@@ -192,7 +191,7 @@ class AddRecipe extends Component {
             <input
               value={this.state.newStep}
               onChange={e => this.setState({ newStep: e.target.value })}
-              placeholder="enter new step"
+              placeholder='enter new step'
               className='IngredientsInput'
               onKeyPress={event => {
                 if (event.key === 'Enter') {
