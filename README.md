@@ -4,7 +4,7 @@ Link to live app: https://cocktail-cookbook.jrb5004.now.sh/addrecipe
 ## Screenshots
 
 ### Homepage:
-![homepage](src/Images/ice.homescreenshot.PNG)
+![homepage](src/Images/homescreenshot.PNG)
 
 ### Results page:
 ![recipe page](src/Images/recipescreenshot.PNG)
