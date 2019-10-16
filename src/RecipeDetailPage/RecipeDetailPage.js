@@ -35,7 +35,6 @@ class RecipeDetailPage extends Component {
   }
 
    render() {
-  // const {recipe} = this.state
    return (
      <div className='RecipeDetail'>
        <section className='ActualRecipe'>
@@ -62,6 +61,7 @@ class RecipeDetailPage extends Component {
          </Link>
         <section className="CurrentReviews">
          <h3>Reviews:</h3>
+         {(!this._getRecipe() || !this._getRecipe().reviews || this._getRecipe().reviews.length <= 0 || this._getRecipe().reviews[0] == "") ? <p>Be the first to leave a review for this recipe!</p> :
          <ul className='ReviewList'>
          {this._getRecipe() && this._getRecipe().reviews && this._getRecipe().reviews.map((review, index) =>
            <li key={index}>
@@ -69,6 +69,7 @@ class RecipeDetailPage extends Component {
            </li>
            )}
            </ul>
+         }
         </section>
         <section className="ReviewForm">
           <ReviewForm />

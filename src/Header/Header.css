@@ -2,19 +2,22 @@
 
 .Header {
 
-    background-image: url("../Images/cocktails.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url('../Images/cocktails.jpg') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: #E9BEB5;
     font-size: 24px;
     font-family:'Mansalva', cursive;
     height: 9rem;
+    border-bottom: 3px solid darkblue;
 }
 
 h1 {
     margin-bottom: 0;
     margin-top: 10px;
-    color: #E9BEB5;
+    color: #db978a;
 }
 
 a {
@@ -40,14 +43,14 @@ a:visited {
 
 @media all and (min-width: 900px) {
     .Header {
-        height: 20rem;
+        height: 17rem;
     }
 }
 
     
 @media all and (min-width: 1100px) {
     .Header {
-        height: 25rem;
+        height: 22rem;
     }
 }
     

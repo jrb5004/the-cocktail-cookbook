@@ -81,7 +81,7 @@ li p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f3ded8;
+    background-color: rgb(219, 151, 138, .4);
     margin-top: 12%;
 }
 
@@ -123,6 +123,15 @@ li p {
     box-shadow: 1px 1px 1px 1px darkblue;
     margin-bottom: 5%;
 }
+
+ol li p:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 
 @media all and (min-width: 700px) {
     .AddEditRecipeForm {

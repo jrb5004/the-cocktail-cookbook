@@ -4,7 +4,7 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #f3ded8;
+    background-color: rgb(219, 151, 138, .4);
     border-top: 3px solid darkblue;
     display: flex;
     flex-direction: row;

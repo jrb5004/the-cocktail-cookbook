@@ -138,7 +138,7 @@ class EditRecipe extends Component {
       return (
         <div className='AddEditRecipeForm'>
           <form onSubmit={this.handleUpdateRecipe}>
-          <h2>Edit Recipe</h2>
+          <h2>Edit Recipe: {name}</h2>
           <div>
             <h4>Ingredients:</h4>
                 <ol className='StepIngList'>
