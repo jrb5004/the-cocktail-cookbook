@@ -4,7 +4,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     font-size: 18px;
 }
 
@@ -50,8 +50,73 @@
     text-decoration: underline;
 }
 
-.AddRecipeParagraph {
-    padding: 0 2%;
-    margin-top: 8%;
+.logosWrapper{
+    display: none;
 }
 
+.AddRecipeParagraph {
+    margin-top: -20%;
+}
+
+
+@media all and (min-width: 500px) {
+    .Description p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ViewCocktails {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logosWrapper {
+        display: block;
+    }
+    .logosWrapper p {
+        width: 1px;
+        margin: 0;
+        padding: 0;
+    }
+    .logosWrapper img p {
+        display: inline-block;
+    }
+    .AddRecipeParagraph{
+        margin: 5% 2%;
+    }
+    
+}
+
+@media all and (min-width: 900px) {
+    .outerWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 3%;
+        margin-top: -5%;
+    }
+    .ViewCocktails {
+        height: 25rem;
+        width: 50%;
+        margin: 0;
+        margin: auto;
+    }
+    .Description {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+
+@media all and (min-width: 1100px) {
+    .ViewCocktails {
+        height: 25rem;
+        width: 40%;
+        margin: 0;
+        margin: auto;
+    }
+    .AddRecipeParagraph {
+        margin-top: -5%;
+    }
+}

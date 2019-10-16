@@ -29,3 +29,27 @@ a:visited {
     color: darkblue;
 }
 
+@media all and (min-width: 500px) {
+    .Header {
+        height: 15rem;
+    }
+    .Header h1 {
+        font-size: 5rem;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .Header {
+        height: 20rem;
+    }
+}
+
+    
+@media all and (min-width: 1100px) {
+    .Header {
+        height: 25rem;
+    }
+}
+    
+
+

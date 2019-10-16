@@ -55,3 +55,29 @@
 .RecipeDetail h2 {
     margin-bottom: 3%;
 }
+
+@media all and (min-width: 700px) {
+    .ActualRecipe, .CurrentReviews, .ReviewForm {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+    
+@media all and (min-width: 900px) {
+    .ActualRecipe, .CurrentReviews, .ReviewForm {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .ActualRecipe, .CurrentReviews, .ReviewForm {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
