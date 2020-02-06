@@ -8,7 +8,7 @@ html, body {
 }
 
 .App {
-    color: darkblue;
+    color: red;
     text-align: center;
     display: flex;
     flex-direction: column;
