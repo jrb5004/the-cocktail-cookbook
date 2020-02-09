@@ -4,8 +4,7 @@
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: rgb(219, 151, 138, .4);
-    border-top: 3px solid darkblue;
+    border-top: 1.5px solid darkblue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

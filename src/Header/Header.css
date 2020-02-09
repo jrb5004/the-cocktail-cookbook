@@ -1,32 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Mansalva');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 .Header {
-
-    background: url('../Images/cocktails.jpg') no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    color: #E9BEB5;
-    font-size: 24px;
-    font-family:'Mansalva', cursive;
-    height: 9rem;
-    border-bottom: 3px solid darkblue;
+    font-family: 'Oswald', sans-serif;
+    max-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3% auto 3% auto;
 }
+
+.Header img {
+    margin: 5px 8px;
+}
+
 
 h1 {
     margin-bottom: 0;
     margin-top: 10px;
-    color: #db978a;
+    color: darkredblue;
+    text-shadow: 2px 2px 3px #FFFF99;
 }
 
 a {
     text-decoration: none;
 }
-
-a:hover {
-    color: hotpink;
-  }
 
 a:visited {
     color: darkblue;

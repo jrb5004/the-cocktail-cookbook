@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
 import Header from './Header/Header';
+import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
 import RecipeListPage from './RecipeListPage/RecipeListPage';
 import RecipeDetailPage from './RecipeDetailPage/RecipeDetailPage';
@@ -74,6 +75,7 @@ class App extends Component {
     return (
       <ApiContext.Provider value={{...this.state, addCocktail: this.addCocktail, updateRecipe: this.updateRecipe, addReview: this.addReview}}>
         <div className='App'>
+            <Route exact path='/' component = {Nav} />
             <Header />
             <main>
               <Route exact path='/' component = {HomePage} />

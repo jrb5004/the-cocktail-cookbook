@@ -1,0 +1,14 @@
+.Navigation{
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.Navigation a{
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #FFFF99;
+}

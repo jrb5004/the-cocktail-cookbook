@@ -8,20 +8,22 @@ html, body {
 }
 
 .App {
-    color: red;
+    color: darkblue;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: 'Bree Serif', serif;
-    font-size: 18px;
-}
-
-main {
-    background-image: url("./Images/ice.jpg");
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    background-image: url("./Images/background1.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: auto;
+    min-height: 100vh
+}
+
+main {
+    overflow: hidden;
     min-height: 100vh
 }
 
@@ -36,15 +38,9 @@ li {
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    color: hotpink;
-  }
-
-a:visited {
     color: darkblue;
 }
+
 
 select {
     margin-bottom: 5%;
@@ -124,7 +120,7 @@ li p {
     margin-bottom: 5%;
 }
 
-ol li p:hover {
+ul li:hover {
     cursor: pointer;
 }
 
