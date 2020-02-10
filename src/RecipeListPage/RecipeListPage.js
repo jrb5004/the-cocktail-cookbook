@@ -10,6 +10,10 @@ class RecipeListPage extends Component {
     }
   }
   static contextType = ApiContext
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
    
   render() {
     let selectedCat = this.props.match.params.catId
@@ -31,9 +35,11 @@ class RecipeListPage extends Component {
         <p className='RecipeDesc'>{finalCat.description}</p>
         <ul className='RecipeListMain'>
             {finalRecipes.map(cocktail =>
-            <li key={cocktail.id}>
-                <Link to={`/recipe/${cocktail.id}`}>{cocktail.name}</Link>
-            </li>
+                <Link to={`/recipe/${cocktail.id}`}>
+                <li key={cocktail.id}>
+                  <span>{cocktail.name}</span>
+                </li>
+            </Link>
             )}
           </ul>
         <p className='AddCatRecipe'>Have a great {finalCat.name} recipe not listed above?  Add it to the collection <Link to={`/addrecipe`}><span className='AddRecipeLink'>here</span>.</Link></p>

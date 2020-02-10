@@ -23,7 +23,6 @@ html, body {
 }
 
 main {
-    overflow: hidden;
     min-height: 100vh
 }
 
@@ -77,7 +76,7 @@ li p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(219, 151, 138, .4);
+    background-color: rgb(255,255,153, .4);
     margin-top: 12%;
 }
 
@@ -96,7 +95,7 @@ li p {
 }
 
 .StepButton {
-    background-color: #f3ded8;
+    background-color: #FFFF99;
     color: darkblue;
     width: 20%;
     height: 30px;
@@ -111,7 +110,7 @@ li p {
 }
 
 .AddEditSubmitButton {
-    background-color: #f3ded8;
+    background-color: #FFFF99;
     color: darkblue;
     width: 20%;
     height: 40px;

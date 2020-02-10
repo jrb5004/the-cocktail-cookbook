@@ -5,7 +5,6 @@ import './Header.css'
 var logoOne = require('../Images/Logo.png')
 var logoTwo = require('../Images/cookbook.png')
 
-//<img src={logoTwo} alt = 'cookbook logo' className = 'CookBook' />
 class Header extends Component {
   render() {
     return (
@@ -13,8 +12,6 @@ class Header extends Component {
           <Link to={`/`}>
             <h1>The Cocktail Cookbook</h1>
           </Link>
-          
-          
       </section>
     )
   }

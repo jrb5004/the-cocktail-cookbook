@@ -16,7 +16,10 @@ class RecipeDetailPage extends Component {
    }
    static contextType = ApiContext
    componentDidMount() {
-     setTimeout(() => { console.log(this.context) }, 3000)
+    
+    window.scrollTo(0, 0)
+    
+    setTimeout(() => { console.log(this.context) }, 3000)
 
    }
    _getRecipe() {

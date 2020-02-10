@@ -12,6 +12,14 @@
     height: 2.5rem;
 }
 
+.Footer a {
+    color: #FFFF99;
+}
+
+.Footer a:hover {
+    color: lightskyblue;
+}
+
 .name, .contact {
     font-size: 14px;
     color: darkblue;

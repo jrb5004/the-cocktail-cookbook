@@ -10,20 +10,50 @@
 }
 
 .RecipeListMain {
-    border: 3px groove darkblue;
-    border-radius: 5px;
     text-align: center;
     margin: 15% auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgb(219, 151, 138, .4);
     width: 70%;
 }
 
 
 .RecipeListMain li {
-    margin: 2% auto;
+    border-radius: 4px;
+    border: 2px solid darkblue;
+    background-color: rgb(255,255,153, .4);
+    box-shadow: 2px 2px 3px darkblue;  
+    padding: 20px;
+    width: 75%;
+    transition: all 0.5s;
+    margin: 5px auto;
+}
+  
+  
+.RecipeListMain li span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.RecipeListMain li span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.RecipeListMain li:hover span {
+    padding-right: 25px;
+}
+
+.RecipeListMain li:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .RecipeName {

@@ -1,14 +1,53 @@
-.Navigation{
-    margin: 10px 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.NavLinks{
+    display: none;
 }
 
-.Navigation a{
+.NavLinks a{
     margin: 0 10px;
 }
 
 nav a:hover {
     color: #FFFF99;
+}
+
+.Hamburger {
+    min-height: 40px;
+    margin-bottom: 5px;
+}
+
+.Hamburger img {
+    float: right;
+    padding: 4px;
+}
+
+#Dropdown {
+    display: none;
+  
+}
+
+#Dropdown a {
+    display: block;
+    background-color: darkblue;
+    color: #FFFF99;
+    padding: 20px auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    min-height: 30px;
+    width: 50%;
+    float: right;
+}
+
+
+@media all and (min-width: 500px) {
+    .NavLinks{
+        margin: 10px 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .Hamburger {
+        display: none;
+    }
+    
 }

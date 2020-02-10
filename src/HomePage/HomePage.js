@@ -24,7 +24,7 @@ class HomePage extends Component {
             <p>View and edit recipes, add your own recipes to the collection, and leave comments with your feedback.</p>
           </section>
           <hr></hr>
-          <section className='ViewCocktails'>
+          <section className='ViewCocktails' id='ViewCocktails'>
             <h2 className='CatTitle'>View Recipes!</h2>
             <div className = "LogoWrapper">
               <img src={logoOne} alt = 'cocktail logo' className = 'Logo' />
@@ -33,18 +33,20 @@ class HomePage extends Component {
             <p>Select cocktail category below to view recipes and start mixin'!</p>
             <ul className='CatList'>
               {categories.map(cat =>
-              <li key={cat.id}>
-                  <Link to={`/cat/${cat.id}`}>{cat.name}</Link>
-              </li>
+              <Link to={`/cat/${cat.id}`}>
+                <li key={cat.id}>
+                    <span>{cat.name}</span>
+                </li>
+              </Link>
               )}
             </ul>
           </section>
         </main>
         <hr></hr>
-          <section>
+          <section className='AddRecipeHome'>
           <h2 className='CatTitle'>Add a Recipe to the Cookbook!</h2>
           <p className='AddRecipeParagraph'>Have a great recipe not found in the cookbook?</p>  
-          <p className='AddRecipeParagraph'>Add it <Link to={`/addrecipe`}><span className='AddRecipeLink'>here</span></Link>.</p>
+          <p className='AddRecipeParagraph'>Add it <Link to={`/addrecipe`}><span className='AddRecipeLink'>here.</span></Link></p>
         </section>
       </div>
     )
