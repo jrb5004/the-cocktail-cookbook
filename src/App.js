@@ -21,6 +21,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+    document.title = 'The Cocktail Cookbook'
     Promise.all([
         fetch(`${BASE_URL}/api/categories`, {headers: {
             'content-type': 'application/json',
